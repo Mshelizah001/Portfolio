@@ -60,12 +60,12 @@ Copy code
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/Mshelizah001/Portfolio
 Open index.html in your browser.
 
 Live Demo
 Hosted on GitHub Pages:
- https://your-username.github.io/portfolio
+  https://mshelizah001.github.io/Portfolio/
 
 GUI / Interface (Rubric Coverage)
 1) Responsiveness (Fluid + Media Queries, no flexbox)
