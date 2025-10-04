@@ -1,0 +1,21 @@
+/* Mobile styles (≤599px) */
+body {
+  font-size: 15px;
+  padding: 10px;
+}
+
+/* Stack nav vertically for narrow screens */
+nav ul li {
+  display: block;
+  margin: 8px 0;
+}
+
+/* Projects/articles stacked */
+.projects article {
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* make sure cards + contact stack on mobile */
+.projects .card{width:100%}
+.contact-card .col{width:100%;padding:0}
+.btn-dark{width:100%}

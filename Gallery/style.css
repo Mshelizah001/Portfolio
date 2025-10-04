@@ -1,0 +1,100 @@
+/* ================================
+   Jesse | Minimal Course-Safe CSS
+   What I use: inline-block layout, gradients, forms, tabs, media queries,
+==================================*/
+
+/* --- Base ------------------------------------------------------------ */
+html,body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#000}
+main{padding:20px}
+h2,h3{color:#6C40F7} /* course purple */
+
+/* --- Header + Nav () --------------------------------- */
+header{
+  background:linear-gradient(135deg,#4089F7,#6C40F7);
+  color:#fff;padding:15px;border-radius:16px;margin:12px;overflow:hidden
+}
+header h1{margin:0}
+nav ul{list-style:none;margin:10px 0 0;padding:0}
+nav li{display:inline-block;margin-right:15px}
+nav a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:8px;transition:.2s}
+nav a:hover{color:#40C3F7;text-decoration:underline}
+nav a.active,nav a[aria-current="page"]{color:#40C3F7;font-weight:700;border-bottom:2px solid #40C3F7}
+
+/* --- Footer ---------------------------------------------------------- */
+footer{background:#111;color:#eee;text-align:center;padding:15px}
+
+/* --- Project cards --------------------------------------------------- */
+.projects .card,.projects article{
+  display:inline-block;vertical-align:top;width:100%;
+  margin:10px 0;padding:15px;background:#fff;border:2px solid #C0C5F9;border-radius:10px;
+  transition:.2s
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.badge{display:inline-block;padding:2px 8px;border-radius:12px;background:#A840F7;color:#fff;font-size:12px}
+.warning{color:#e53935;font-weight:bold}
+
+/* --- Forms (shared) -------------------------------------------------- */
+form{
+  max-width:500px;margin:20px auto;background:#C0C5F9;padding:20px;border-radius:10px;
+  box-shadow:0 2px 6px rgba(0,0,0,.15)
+}
+form label{display:block;margin:12px 0 6px;font-weight:bold}
+form input,form textarea,form button{width:100%;font-size:15px;border-radius:6px}
+form input,form textarea{padding:10px;border:1px solid #bbb;background:#fff;color:#000}
+form input:focus,form textarea:focus{border-color:#40C3F7;outline:0;box-shadow:0 0 6px rgba(64,195,247,.5)}
+form button{padding:12px;margin-top:15px;background:#40C3F7;color:#fff;border:0;font-weight:bold;cursor:pointer;transition:.25s}
+form button:hover{background:#4089F7}
+
+/* --- About image (old-school float) --------------------------------- */
+.about img{width:200px;height:auto;border-radius:8px;float:left;margin:0 16px 16px 0}
+.about:after{content:"";display:table;clear:both}
+
+/* --- Tabs (buttons; inline-block) ----------------------------------- */
+.tabs{margin-top:10px}
+.tablist{list-style:none;margin:0 0 10px;padding:0;border-bottom:3px solid #40C3F7}
+.tablist li{display:inline-block;margin:0 6px 0 0}
+.tablist [role="tab"]{
+  display:inline-block;border:1px solid #ddd;border-bottom:none;background:#eee;color:#000;
+  padding:10px 14px;border-top-left-radius:10px;border-top-right-radius:10px;cursor:pointer;transition:.2s
+}
+.tablist [role="tab"]:hover{background:#f5f5f5}
+.tablist [role="tab"][aria-selected="true"]{
+  background:#fff;color:#6C40F7;border-color:#40C3F7;box-shadow:0 -2px 6px rgba(0,0,0,.08);border-bottom:3px solid #fff
+}
+.panel{border:1px solid #40C3F7;border-top:3px solid #40C3F7;border-radius:0 10px 10px 10px;padding:16px;background:#fff}
+
+/* --- Checkbox-hack modal (no JS used) ------------------------------------ */
+.modal-toggle{position:absolute;left:-9999px}         /* hide the checkbox */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.5)}
+.modal-box{background:#fff;max-width:600px;width:90%;padding:20px;border-radius:12px;transition:.2s}
+.modal-close{display:inline-block;float:right;font-weight:bold;text-decoration:none;color:#000;cursor:pointer}
+.modal-toggle:checked + .modal{display:flex}
+.btn{display:inline-block;background:#40C3F7;color:#fff;padding:8px 16px;border-radius:6px;cursor:pointer;text-decoration:none;transition:.2s}
+.btn:hover{background:#4089F7}
+
+/* --- Contact "hero" (new design) --------------------------------
+   left = title; right = form; columns via inline-block. */
+.contact-hero{padding:32px 12px;background:linear-gradient(180deg,rgba(64,195,247,.22),rgba(108,64,247,.12))}
+.contact-card{max-width:980px;margin:20px auto;padding:28px;background:#fff;border-radius:24px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.contact-card .col{display:inline-block;vertical-align:top;width:48%}
+.contact-card .col.left{padding-right:2%}
+.contact-card .col.right{padding-left:2%}
+.contact-card h2{font-size:2.2rem;margin:0 0 10px;color:#000}
+.contact-card .muted{color:#555;margin:8px 0 18px}
+.contact-card form{background:transparent;padding:0;margin:0;box-shadow:none;border-radius:0}
+.btn-dark{display:inline-block;background:#000;color:#fff;border:0;padding:12px 18px;border-radius:12px;cursor:pointer;margin-top:16px;transition:.2s}
+.btn-dark:hover{opacity:.9}
+
+/* --- Responsive (just what I need) ---------------------------------- */
+@media (min-width:600px){
+  .projects .card{width:48%;margin-right:2%}
+  .projects .card:nth-child(2n){margin-right:0}
+}
+@media (min-width:900px){
+  .projects .card{width:31.5%;margin-right:2%}
+  .projects .card:nth-child(3n){margin-right:0}
+}
+@media (max-width:700px){
+  .contact-card .col{width:100%;padding:0}
+  .btn-dark{width:100%}
+}

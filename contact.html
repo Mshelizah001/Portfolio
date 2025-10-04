@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • Jesse Daniel Mshelizah</title>
+  <link rel="stylesheet" href="Gallery/style.css" />
+  <link rel="stylesheet" href="Gallery/mobile.css" media="(max-width: 599px)" />
+  <link rel="stylesheet" href="Gallery/tablet.css" media="(min-width: 600px) and (max-width: 1023px)" />
+  <link rel="stylesheet" href="Gallery/desktop.css" media="(min-width: 1024px)" />
+
+</head>
+<body>
+  <header>
+    <h1 class="site-name">Jesse Daniel Mshelizah</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  <section class="contact-hero">
+    <div class="contact-card">
+      <!-- Left: title/intro -->
+      <div class="col left">
+        <h2>Let’s chat.</h2>
+        <p class="muted">Questions or collabs? Send a quick note and I’ll reply.</p>
+      </div>
+
+      <!-- Right: form -->
+      <div class="col right">
+        <form action="#" method="post" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="phone">Cell No.</label>
+          <input id="phone" name="phone" type="tel">
+
+          <label for="msg">Comments</label>
+          <textarea id="msg" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn-dark">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer>
+    <p>© <span id="year"></span> Jesse Daniel Mshelizah •
+      <a href="mailto:jesse.mshelizah@ontariotechu.net">jesse.mshelizah@ontariotechu.net</a>
+    </p>
+  </footer>
+
+  <script src="Gallery/main.js"></script>
+</body>
+</html>

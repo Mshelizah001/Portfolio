@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects • Jesse Daniel Mshelizah</title>
+
+  <!-- Base + responsive CSS -->
+  <link rel="stylesheet" href="Gallery/style.css" />
+  <link rel="stylesheet" href="Gallery/mobile.css" media="(max-width: 599px)" />
+  <link rel="stylesheet" href="Gallery/tablet.css" media="(min-width: 600px) and (max-width: 1023px)" />
+  <link rel="stylesheet" href="Gallery/desktop.css" media="(min-width: 1024px)" />
+</head>
+<body>
+  <header>
+    <h1 class="site-name">Jesse Daniel Mshelizah</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tabs section now has its own heading -->
+    <section class="tabs" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+
+      <ul class="tablist" role="tablist" aria-label="Project categories">
+        <li><button type="button" role="tab" aria-selected="true"  aria-controls="panel-uiux" id="tab-uiux">UI/UX</button></li>
+        <li><button type="button" role="tab" aria-selected="false" aria-controls="panel-algo" id="tab-algo">Algorithms</button></li>
+        <li><button type="button" role="tab" aria-selected="false" aria-controls="panel-sys"  id="tab-sys">Systems</button></li>
+        <li><button type="button" role="tab" aria-selected="false" aria-controls="panel-util" id="tab-util">Utilities</button></li>
+      </ul>
+
+      <!-- Panels (only one visible at a time) -->
+      <div id="panel-uiux" role="tabpanel" tabindex="0" aria-labelledby="tab-uiux">
+        <article>
+          <h3>Healthcare Appointment UI <span class="badge">UI/UX</span></h3>
+          <p>Designed clean booking flows with accessibility in mind.</p>
+        </article>
+        <article>
+          <h3>UI Patterns Library</h3>
+          <p>Reusable buttons, forms, and cards for faster prototyping.</p>
+        </article>
+      </div>
+
+      <div id="panel-algo" role="tabpanel" tabindex="0" aria-labelledby="tab-algo" hidden>
+        <article>
+          <h3>Trie Autocomplete (Python)</h3>
+          <p>Standard + ternary trie with ranking for real-time suggestions.</p>
+        </article>
+      </div>
+
+      <div id="panel-sys" role="tabpanel" tabindex="0" aria-labelledby="tab-sys" hidden>
+        <article>
+          <h3>ARMv7 vs RISC-V</h3>
+          <p>Implemented calculator &amp; Fibonacci; analyzed instruction differences.</p>
+        </article>
+      </div>
+
+      <div id="panel-util" role="tabpanel" tabindex="0" aria-labelledby="tab-util" hidden>
+        <article>
+          <h3>Durham Tax Calculator</h3>
+          <p>Simple tool to estimate municipal taxes with clear outputs.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Jesse Daniel Mshelizah •
+      <a href="mailto:jesse.mshelizah@ontariotechu.net">jesse.mshelizah@ontariotechu.net</a>
+    </p>
+  </footer>
+
+  <script src="Gallery/main.js"></script>
+</body>
+</html>

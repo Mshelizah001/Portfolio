@@ -1,0 +1,14 @@
+/* Desktop (≥1024px) */
+body{font-size:17px;padding:20px;background:#fff}
+
+/* nav inline, a bit more spacing */
+nav ul li{display:inline-block;margin-right:25px}
+
+/* projects: three columns */
+.projects .card,
+.projects article{display:inline-block;width:30%;margin:1.5%;vertical-align:top}
+
+/* contact: two columns stay */
+.contact-card .col{width:48%}
+.contact-card .col.left{padding-right:2%}
+.contact-card .col.right{padding-left:2%}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • Jesse Daniel Mshelizah</title>
+
+  <!-- Base + responsive CSS (no flexbox) -->
+  <link rel="stylesheet" href="Gallery/style.css" />
+  <link rel="stylesheet" href="Gallery/mobile.css" media="(max-width: 599px)" />
+  <link rel="stylesheet" href="Gallery/tablet.css" media="(min-width: 600px) and (max-width: 1023px)" />
+  <link rel="stylesheet" href="Gallery/desktop.css" media="(min-width: 1024px)" />
+</head>
+<body>
+  <header>
+    <h1 class="site-name">Jesse Daniel Mshelizah</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+
+      <!-- Your photo -->
+      <img src="Gallery/me.jpg" alt="Photo of Jesse Daniel Mshelizah">
+
+      <!-- Short intro -->
+      <p>Hello! My name is Jesse Daniel Mshelizah.  
+      I am passionate about UI/UX, web development, and technology management.  
+      I enjoy creating simple, accessible, and user-friendly designs.</p>
+
+      <!-- Introductory video with thumbnail -->
+      <video controls width="400" poster="Gallery/me.jpg">
+        <source src="Gallery/intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Jesse Daniel Mshelizah •
+      <a href="mailto:jesse.mshelizah@ontariotechu.net">jesse.mshelizah@ontariotechu.net</a>
+    </p>
+  </footer>
+
+  <script src="Gallery/main.js"></script>
+</body>
+</html>
